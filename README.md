@@ -1,2 +1,3 @@
-# wolfram
-Notebooks, examples, data, and puzzles to help people learn Mathematica &amp; the Wolfram Language
+# Learn Mathematica and the Wolfram Language
+
+The Socratica course [Mathematica Essentials](https://vimeo.com/ondemand/mathematica) teaches you what you need to become proficient and productive with Mathematica.
