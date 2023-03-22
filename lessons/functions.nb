@@ -1,0 +1,2565 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    117888,       2557]
+NotebookOptionsPosition[    113890,       2466]
+NotebookOutlinePosition[    115180,       2507]
+CellTagsIndexPosition[    115137,       2504]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Functions", "Title",
+ CellChangeTimes->{{3.829243491285164*^9, 3.829243500109393*^9}, {
+  3.8383390304854336`*^9, 3.8383390353718786`*^9}, {3.8383390872219276`*^9, 
+  3.8383390875796757`*^9}, {3.864427525816122*^9, 3.864427526680485*^9}, {
+  3.864757168935336*^9, 3.8647571722090893`*^9}, {3.8647659431464834`*^9, 
+  3.8647659523514605`*^9}, {3.8655511843772955`*^9, 3.8655511848563566`*^9}, {
+  3.866228070261115*^9, 3.866228071561146*^9}, {3.8751203583202515`*^9, 
+  3.875120360654212*^9}, {3.8751236364930625`*^9, 3.87512366983785*^9}, {
+  3.87512471217474*^9, 3.875124712493815*^9}, {3.8786718499319687`*^9, 
+  3.8786718523071003`*^9}, {3.8789244491088195`*^9, 3.878924450345374*^9}, {
+  3.879781536598356*^9, 3.8797815393580475`*^9}, {3.8824883992090645`*^9, 
+  3.88248840905671*^9}, {3.8824884506961336`*^9, 
+  3.882488451424055*^9}},ExpressionUUID->"03779fd7-1081-4021-b952-\
+c4afe3d4c95c"],
+
+Cell[BoxData[{
+ RowBox[{"Lesson", ":", " ", 
+  TemplateBox[{"Functions", {
+     URL["https://vimeo.com/ondemand/mathematica/799328040"], None}, 
+    "https://vimeo.com/ondemand/mathematica/799328040", 
+    "HyperlinkActionRecycled", {"HyperlinkActive"}, 
+    BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+   "HyperlinkTemplate"]}], "\n", 
+ RowBox[{"Course", ":", " ", 
+  ButtonBox[
+   RowBox[{"Mathematica", " ", "Essentials"}],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["https://vimeo.com/ondemand/mathematica"], None},
+   ButtonNote->"https://vimeo.com/ondemand/mathematica"]}]}], "Author",
+ CellChangeTimes->{{3.8883575347655134`*^9, 3.888357671395486*^9}, {
+  3.888359479266924*^9, 3.888359492359906*^9}, {3.888359529050063*^9, 
+  3.888359611178982*^9}},ExpressionUUID->"5c4c7506-3563-4e0f-b30a-\
+8627ebf1186b"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{{3.875125173035077*^9, 3.8751251755136533`*^9}, {
+  3.878672054837291*^9, 3.878672055156974*^9}, {3.878679756346073*^9, 
+  3.878679759867011*^9}, {3.8789302741189194`*^9, 3.8789302744254766`*^9}, {
+  3.8793594206601353`*^9, 3.879359437900464*^9}, {3.879362173445735*^9, 
+  3.8793621735432267`*^9}, {3.87978156629447*^9, 3.879781567158065*^9}, {
+  3.882489247935063*^9, 3.882489250151038*^9}, {3.8824909521178374`*^9, 
+  3.8824909534899254`*^9}, {3.8883559771146727`*^9, 3.8883559779153347`*^9}, {
+  3.8884239607704554`*^9, 
+  3.888423962018015*^9}},ExpressionUUID->"3f2fd9c6-d2e4-4ce4-8d57-\
+1b0b1139d74f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", "=", 
+  RowBox[{"{", 
+   RowBox[{
+   "1", ",", "2", ",", "5.5", ",", "6", ",", "9", ",", "9", ",", "9", ",", 
+    "10"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.8824903939630013`*^9, 3.8824904083047075`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5f72ae03-5c36-48ca-bac9-583dfc059894"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "5.5`", ",", "6", ",", "9", ",", "9", ",", "9", ",", 
+   "10"}], "}"}]], "Output",
+ CellChangeTimes->{3.8824904086088505`*^9, 3.888355963865593*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"06c0e65f-8b9d-428d-a880-1ab05301b4c0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Mean", "[", "data", "]"}]], "Input",
+ CellChangeTimes->{{3.8824905155197935`*^9, 3.882490517406463*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"c8090162-46c3-4d4c-b4fa-d9d45bd04754"],
+
+Cell[BoxData["6.4375`"], "Output",
+ CellChangeTimes->{3.8824905177632527`*^9, 3.8883559638934946`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"10297ee6-6ecb-4d18-a8e8-07c6dcbed05d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StandardDeviation", "[", "data", "]"}]], "Input",
+ CellChangeTimes->{{3.8824905332640176`*^9, 3.882490536848517*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"85405eb2-8545-41c1-8a4e-b276d8fbcc18"],
+
+Cell[BoxData["3.437581167872882`"], "Output",
+ CellChangeTimes->{3.882490537159322*^9, 3.8883559639017677`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"fa68e538-d6d3-4580-b2d9-b4fdcc0c4f44"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "data", "]"}]], "Input",
+ CellChangeTimes->{{3.8824905463860164`*^9, 3.8824905492862*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"ffca832f-927b-4d94-9897-1261ca04cfc0"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`], 
+    AbsoluteThickness[1.6], 
+    PointBox[{{1., 1.}, {2., 2.}, {3., 5.5}, {4., 6.}, {5., 9.}, {6., 9.}, {
+     7., 9.}, {8., 10.}}]}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{305.66666666666674`, Automatic},
+  Method->{
+   "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "DefaultPlotStyle" -> {
+      Directive[
+       RGBColor[0.368417, 0.506779, 0.709798], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.880722, 0.611041, 0.142051], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.560181, 0.691569, 0.194885], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.922526, 0.385626, 0.209179], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.528488, 0.470624, 0.701351], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.772079, 0.431554, 0.102387], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.363898, 0.618501, 0.782349], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[1, 0.75, 0], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.647624, 0.37816, 0.614037], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.571589, 0.586483, 0.], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.915, 0.3325, 0.2125], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+       AbsoluteThickness[1.6]], 
+      Directive[
+       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+       AbsoluteThickness[1.6]]}, "DomainPadding" -> Scaled[0.02], 
+    "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05], 
+    "OptimizePlotMarkers" -> True, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 8.}, {0, 10.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8824905496302395`*^9, 3.888355964057914*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"452ed0b0-95de-4b3f-b925-0e44e36d84e0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Functions with No Arguments", "Section",
+ CellChangeTimes->{{3.8751251784107733`*^9, 3.8751251823696136`*^9}, {
+  3.8786720646272926`*^9, 3.8786720649474587`*^9}, {3.8786800386476655`*^9, 
+  3.8786800405690846`*^9}, {3.8789302758097143`*^9, 3.8789302761114354`*^9}, {
+  3.8793594334684477`*^9, 3.87935944422955*^9}, {3.8793626707329755`*^9, 
+  3.8793626924051056`*^9}, {3.879781569294716*^9, 3.879781570221236*^9}, {
+  3.8824909618305826`*^9, 3.8824909622292747`*^9}, {3.882491567629155*^9, 
+  3.8824915712929096`*^9}, {3.8883559841229897`*^9, 
+  3.8883559848673267`*^9}},ExpressionUUID->"f626e3f8-c63f-46f6-b3d9-\
+00eb0da01e93"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomReal", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.882491640247607*^9, 3.8824916414528713`*^9}, {
+  3.8825481348339834`*^9, 3.88254813580018*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"847c0ced-1c30-4b6d-8766-bc40512c1aa8"],
+
+Cell[BoxData["0.28546727029699515`"], "Output",
+ CellChangeTimes->{3.882491641935545*^9, 3.888355964071848*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"a2e3de1f-e17b-4e82-99e7-8c1990b5f49d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.8824915450133495`*^9, 3.882491546790325*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"be645651-c471-473d-8170-abf1f3c24dd3"],
+
+Cell[BoxData[
+ GraphicsBox[{{
+    TagBox[{
+      {Texture[
+        GraphicsBox[
+         TagBox[
+          RasterBox[CompressedData["
+1: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
+/vtiGQ70o6u8ZoIaviMILCyn6jF16XQm5d86XvU7hZRdW7M/rvgrfWq1IFRQ
+rt2MPRJ3kAIJmBt6cAqaTa8vgf5/teN55WNqY/cqt+aqtBp+dGQKKoXClUfj
+/9aBGek7vLYdXEPyg5bRLr1rVfbTlm5f83ZT7ewtBrNNa9RLO719nkXLqIKN
+eliMucbzXtjbFlpR/cyrQhJT/QONQrINJjvCGNQ3H1InW/oy5NfV1ODx24uo
+sKcKMRW9XpJNTVc63+KHJAgWaREoPxqiZmIwLZWgrQenuNnE2YX+j9oJ86vl
+Outdc/7avfIlL6fQJI4XlRiaau+gNIw2RQbVU3ribwnSo3q8qdcf9tRIVBgn
+s0JGuhrI2mTQ3lOL2RtFEVztSqNnuasFF5D2BUbW6Fbff47hj3bBTpp4jfq6
+GMkdgDAqDl1p8GQjRJ28rgoRoTYnRTLmfQ1Tj5vSAt+1kVRpiPCmwiNte0Lz
+JNyqMMlVlVasRIbDyu2qgaYldK0HIU34+r21lBMbQyW2pJxQi1GiRCENkgL6
+VMkRYomzHzPjt0Z/GxSqLzTJT5diUOuj1NujAn2ve90ZTLwLdfBkhmiNv87K
+uWQzRFOxxTQuCrK+sr26ry85V7eJCVNfj8DqVsbxSd5XXfvORn1jtrn/9Ndt
+XpjkdfhRccamuPGj9C6dRy4vKF2urahJTVThX7ePPlwsWK2ux6IvzsbQLcA1
+FO7LC6J6zdUwsY7RqLpf7fwqY9EKvoVCXFHfc/OxK9dsnN+q0mcm2Xrmcdw8
+z4yvqeRvNALaPGKy5SurJXXbo5Svqd3+b326QSOI/NV/ZCbMH0Ih3ydbb0nm
+lZqk0K6Kc/LTop2i4t1UHqnOpwa/kYVrUuDTrkFh6THRO4nJLHOG+p2Fg3wz
+z9hSA5rIdpNuHwoClgzLrUufIEcLdBlt1G81gZr8LsLbUbbIVW4RtJvJtiPc
+Uf8v6jn1zWJO8uz10KU/ULWZ3sE1WwASL1TFIsXH2O9KV/dktUrnMjqeTd3E
+LCLUAoESb+1qJ3QSM0y5+MmfY/dpYHVZVfdJs5dnURVDGy4x1V0Zky4cwt5l
+GM1hdVuGZqNUuzlg5xXMLszSRppCSSg9BpoaVFlCiuXJzpGu9hzz8e20Q3jx
+qHPp+QI9SgFlislFowpI3afT7fM8HOVl6qnkAE//CXmTnq2XECak5PQ8FfHz
+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
+OBwOh8PhcDgi/H8aL9XC
+           "], {{0, 256.}, {513., 0}}, {0, 255}, ColorFunction -> RGBColor], 
+          BoxForm`ImageTag[
+          "Byte", ColorSpace -> "RGB", Interleaving -> False, 
+           MetaInformation -> <|
+            "Exif" -> <|
+              "Software" -> 
+               "Created with the Wolfram Language: www.wolfram.com"|>, 
+             "GeoMetaInformation" -> <|
+              "GeoModel" -> "ITRF00", 
+               "LonLatBox" -> {{-298.14, 61.86}, {-90., 90}}, 
+               "PlotRange" -> {{-298.828125, 61.875}, {-90., 90.}}, 
+               "Projection" -> "Equirectangular", "Software" -> 
+               "Created with the Wolfram Language: www.wolfram.com", 
+               "TileSources" -> {"Wolfram", "OSM"}|>|>], Selectable -> False],
+          DefaultBaseStyle -> "ImageGraphics", ImageSizeRaw -> {513., 256.}, 
+         PlotRange -> {{0, 513.}, {0, 256.}}]], 
+       PolygonBox[{{-298.14, -90.}, {-298.14, 90.}, {61.86000000000002, 
+        90.}, {61.86000000000002, -90.}, {-298.14, -90.}},
+        VertexTextureCoordinates->{{0.0019077322936973395`, 0.}, {
+         0.0019077322936973395`, 1.}, {0.9999584145549059, 1.}, {
+         0.9999584145549059, 0.}, {0.0019077322936973395`, 0.}}]}, {
+       TagBox[
+        {RGBColor[0.2196078431372549, 0.3058823529411765, 0.4235294117647059], 
+         StyleBox[{
+           InsetBox["\<\"Arctic\\nOcean\"\>", {-169.98046875, 82.99948988317833},
+             Center], 
+           InsetBox["\<\"Atlantic\\nOcean\"\>", {-38.3203125, 13.581920900545844},
+             Center], 
+           InsetBox["\<\"Indian\\nOcean\"\>", {-289.9951171875, -10.012129557908128},
+             Center], 
+           InsetBox["\<\"Indian\\nOcean\"\>", {70.0048828125, -10.012129557908128},
+             Center]},
+          StripOnInput->False,
+          LineSpacing->{1.2, 0},
+          FontFamily->"Source Sans Pro",
+          FontSize->Scaled[0.023188646306783967`],
+          FontSlant->Italic,
+          FontTracking->Scaled[0.00463705375081017],
+          FontVariations->{"CapsType"->"AllCaps"}]},
+        Annotation[#, {"symbol", "water_name_ocean", "water_name"}, 
+         "WolframGeoGraphics"]& ], 
+       TagBox[
+        {RGBColor[
+         0.32941176470588235`, 0.32941176470588235`, 0.32941176470588235`], 
+         StyleBox[{
+           InsetBox["\<\"Antarctica\"\>", {-359.6923828125, -79.40816521262417},
+             Center], 
+           InsetBox["\<\"Antarctica\"\>", {0.3076171875, -79.40816521262417}, 
+            Center], 
+           InsetBox["\<\"North\\nAmerica\"\>", {-108.984375, 51.01375465718821},
+             Center], 
+           InsetBox["\<\"South\\nAmerica\"\>", {-420.99609375, -21.002471054356715},
+             Center], 
+           InsetBox["\<\"Africa\"\>", {-342.24609375, 11.523087506868514}, 
+            Center], 
+           InsetBox["\<\"Africa\"\>", {17.75390625, 11.523087506868514}, 
+            Center], 
+           InsetBox["\<\"Asia\"\>", {-270.7470703125, 51.20688339486562}, 
+            Center], 
+           InsetBox["\<\"Asia\"\>", {89.2529296875, 51.20688339486562}, 
+            Center], 
+           InsetBox["\<\"Oceania\"\>", {-221.484375, -18.312810846425442}, 
+            Center], 
+           InsetBox["\<\"Oceania\"\>", {138.515625, -18.312810846425442}, 
+            Center]},
+          StripOnInput->False,
+          LineSpacing->{1.2, 0},
+          FontSize->Scaled[0.02426007487821254],
+          FontTracking->Scaled[0.005057547205970401],
+          FontVariations->{"CapsType"->"AllCaps"}]},
+        Annotation[#, {"symbol", "place_continent", "place"}, 
+         "WolframGeoGraphics"]& ]}},
+     Annotation[#, "GeoBackground", "WolframGeoGraphics"]& ], 
+    TagBox[
+     TagBox[
+      TooltipBox[
+       {Opacity[0], RectangleBox[Scaled[{0.8, 0}], Scaled[{1, 0.2}]]},
+       TagBox[
+        GridBox[{{
+           StyleBox["\"Geo data sources\"", Bold, StripOnInput -> False]}, {
+           
+           TemplateBox[{
+            "\"Wolfram Knowledgebase\"", "\" (\"", 
+             "\"https://www.wolfram.com/\"", "\")\""}, "RowDefault"]}, {
+           
+           TemplateBox[{
+            "\"\[Copyright] MapTiler\"", "\" (\"", 
+             "\"https://www.maptiler.com/copyright/\"", "\")\""}, 
+            "RowDefault"]}, {
+           
+           TemplateBox[{
+            "\"\[Copyright] OpenStreetMap contributors\"", "\" (\"", 
+             "\"https://www.openstreetmap.org/copyright\"", "\")\""}, 
+            "RowDefault"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+         DefaultBaseStyle -> "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Column"]],
+      Annotation[#, 
+       Column[{
+         Style["Geo data sources", Bold], 
+         Row[{
+          "Wolfram Knowledgebase", " (", "https://www.wolfram.com/", ")"}], 
+         Row[{
+          "\[Copyright] MapTiler", " (", 
+           "https://www.maptiler.com/copyright/", ")"}], 
+         Row[{
+          "\[Copyright] OpenStreetMap contributors", " (", 
+           "https://www.openstreetmap.org/copyright", ")"}]}], "Tooltip"]& ],
+     Annotation[#, "Metadata", "WolframGeoGraphics"]& ], {{}, 
+     TagBox[{},
+      Annotation[#, "GeoGridLines", "WolframGeoGraphics"]& ]}}, 
+   TagBox[{},
+    Annotation[#, "GeoScaleBar", "WolframGeoGraphics"]& ]},
+  CoordinatesToolOptions:>{
+   "DisplayFunction" -> (
+     GeoGraphics`GeoGridPositionDisplay[#, "Equirectangular", "ITRF00"]& ), 
+    "CopiedValueFunction" -> (
+     GeoGraphics`GeoGridPositionCopiedValue[#, "Equirectangular", 
+      "ITRF00"]& )},
+  DefaultBaseStyle->"GeoGraphics",
+  Method->{"OriginalInput" -> HoldForm[
+      GeoGraphics[{}]], "BasicGeoRange" -> {{-90., 90.}, {-298.14, 61.86}}, 
+    "GeoGraphicsOptions" -> {GeoBackground -> {
+        GeoStyling["StreetMapNoLabels"], 
+        GeoStyling["VectorLabels"]}, GeoCenter -> 
+      GeoPosition[{34.19, -118.14}], GeoGridLines -> None, GeoGridLinesStyle -> 
+      GrayLevel[0.4, 0.3], 
+      GeoGridRange -> {{-298.14, 61.86000000000002}, {-90., 90.}}, 
+      GeoGridRangePadding -> None, GeoModel -> "ITRF00", GeoProjection -> 
+      "Equirectangular", 
+      GeoRange -> {{-90., 90.}, {-298.14, 61.860000000000014`}}, 
+      GeoRangePadding -> Full, GeoResolution -> Automatic, 
+      GeoServer -> {Automatic}, GeoZoomLevel -> 1, 
+      MetaInformation -> <|"GeoMetaInformation" -> <|"Attribution" -> Row[{
+             Hyperlink["Wolfram Knowledgebase", "https://www.wolfram.com/"], 
+             ", ", 
+             Hyperlink[
+             "\[Copyright] MapTiler", "https://www.maptiler.com/copyright/"], 
+             ", ", 
+             Hyperlink[
+             "\[Copyright] OpenStreetMap contributors", 
+              "https://www.openstreetmap.org/copyright"]}], "AttributionType" -> 
+          "Tooltip", "GeoModel" -> "ITRF00", 
+          "LonLatBox" -> {{-298.14, 61.86}, {-90., 90}}, 
+          "PlotRange" -> {{-298.828125, 61.875}, {-90., 90.}}, "Projection" -> 
+          "Equirectangular", "Software" -> 
+          "Created with the Wolfram Language: www.wolfram.com", 
+          "TileSources" -> {"Wolfram", "OSM", "MapTiler"}|>|>}},
+  PlotRange->{{-298.14, 61.86000000000002}, {-90., 90.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->None]], "Output",
+ CellChangeTimes->{3.8824915519006233`*^9, 3.888355970782445*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"dcf531b4-7035-4860-a555-575ca5683411"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordList", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.8824915548484526`*^9, 3.8824915620370717`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"c9789927-53e7-442a-a94a-81bb124ab1b1"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"{", 
+       RowBox[{
+        "\"a\"", ",", "\"aah\"", ",", "\"aardvark\"", ",", "\"aback\"", ",", 
+         "\"abacus\"", ",", "\"abaft\"", ",", "\"abalone\"", ",", 
+         "\"abandon\"", ",", "\"abandoned\"", ",", "\"abandonment\"", ",", 
+         "\"abase\"", ",", "\"abasement\"", ",", "\"abash\"", ",", 
+         "\"abashed\"", ",", "\"abashment\"", ",", "\"abate\"", ",", 
+         "\"abatement\"", ",", "\"abattoir\"", ",", "\"abbe\"", ",", 
+         "\"abbess\"", ",", "\"abbey\"", ",", "\"abbot\"", ",", 
+         "\"abbreviate\"", ",", "\"abbreviated\"", ",", "\"abbreviation\"", 
+         ",", "\"abdicate\"", ",", "\"abdication\"", ",", "\"abdomen\"", ",", 
+         "\"abdominal\"", ",", "\"abduct\"", ",", "\"abducting\"", ",", 
+         TemplateBox[{"39114"}, "OutputSizeLimit`Skeleton"], ",", "\"zinc\"", 
+         ",", "\"zinfandel\"", ",", "\"zing\"", ",", "\"zinger\"", ",", 
+         "\"zinnia\"", ",", "\"zip\"", ",", "\"zipper\"", ",", "\"zippy\"", 
+         ",", "\"zircon\"", ",", "\"zirconium\"", ",", "\"zit\"", ",", 
+         "\"zither\"", ",", "\"zloty\"", ",", "\"zodiac\"", ",", 
+         "\"zodiacal\"", ",", "\"zombie\"", ",", "\"zonal\"", ",", "\"zone\"",
+          ",", "\"zoning\"", ",", "\"zoo\"", ",", "\"zoological\"", ",", 
+         "\"zoologist\"", ",", "\"zoology\"", ",", "\"zoom\"", ",", 
+         "\"zoophyte\"", ",", "\"zounds\"", ",", "\"zucchini\"", ",", 
+         "\"zwieback\"", ",", "\"zydeco\"", ",", "\"zygote\"", ",", 
+         "\"zygotic\""}], "}"}], Short[#, 8]& ], "line" -> 7, "sessionID" -> 
+   23930835030048615909, "byteCount" -> 1756680, "size" -> 8, "stored" -> 
+   False, "expr" -> Missing["NotAvailable", "NewSessionID"], "wrap" -> 
+   OutputSizeLimit`Defer, "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{{3.882491556980135*^9, 3.8824915623642755`*^9}, 
+   3.8883559725491066`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"1d9a0c39-c035-4e0b-b40c-44bfc768980f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The Asterisk", "Section",
+ CellChangeTimes->{{3.8655546143932924`*^9, 3.865554617328904*^9}, {
+   3.865957696312199*^9, 3.865957701622691*^9}, {3.875124886246519*^9, 
+   3.8751248882701597`*^9}, {3.8751518950013924`*^9, 3.875151897072608*^9}, 
+   3.875152177153573*^9, {3.8786721795156384`*^9, 3.8786721803949146`*^9}, {
+   3.8786878494361744`*^9, 3.878687858140275*^9}, {3.8786891838446045`*^9, 
+   3.8786891842622204`*^9}, {3.8786895538920965`*^9, 
+   3.8786895580993934`*^9}, {3.8786898971994333`*^9, 3.878689900143794*^9}, {
+   3.878690087622945*^9, 3.878690089099473*^9}, {3.878690499623226*^9, 
+   3.878690502812072*^9}, {3.8789302852151823`*^9, 3.878930285503115*^9}, {
+   3.8793778121488876`*^9, 3.8793778183153667`*^9}, {3.879379152199617*^9, 
+   3.8793791543114185`*^9}, {3.8797816192700744`*^9, 
+   3.8797816209578953`*^9}, {3.882554208704861*^9, 3.882554216363799*^9}, {
+   3.8825601853142595`*^9, 3.882560191038178*^9}, {3.8883559874264174`*^9, 
+   3.888355988157512*^9}},ExpressionUUID->"f56aaeff-a372-44ff-bec6-\
+d535ca1d3dae"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Plot*"}]], "Input",
+ CellChangeTimes->{{3.882560312365892*^9, 3.8825603353230853`*^9}, {
+   3.882560396179469*^9, 3.8825603987153215`*^9}, {3.8825604323550315`*^9, 
+   3.882560432882248*^9}, 3.8825605629817977`*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"6d123692-22a6-4a70-a870-e48b4bb0ce53"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"]], " ", 
+          StyleBox["System`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{15., {4., 11.}}], " ", 
+              StyleBox["System`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["Plot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "Plot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotJoined", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotJoined", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotLegends", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotLegends", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotRangeClipping", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotRangeClipping", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotStyle", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotStyle", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Plot3D", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "Plot3D", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotLabel", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotLabel", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotMarkers", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotMarkers", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotRangeClipPlanesStyle", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotRangeClipPlanesStyle", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotTheme", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotTheme", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Plot3Matrix", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "Plot3Matrix", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotLabels", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotLabels", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotPoints", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotPoints", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotRangePadding", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotRangePadding", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["PlotDivision", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotDivision", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotLayout", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotLayout", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotRange", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotRange", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PlotRegion", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-f235d83f-f407-4c2e-9b01-75c63af7fd56", {
+                   "PlotRegion", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.19]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.8825604335393353`*^9, 3.8825605636564636`*^9, 
+  3.888355972745517*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"582274cd-47ed-49d8-887d-23ff3ee0a469"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "*Plot"}]], "Input",
+ CellChangeTimes->{{3.882560506575927*^9, 3.882560510884119*^9}, {
+  3.882560606170893*^9, 3.8825606068104787`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"efb2bb99-3d45-4f9c-bcdb-1da9ab58eb9c"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"]], " ", 
+          StyleBox["System`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{15., {4., 11.}}], " ", 
+              StyleBox["System`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["AbsArgPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "AbsArgPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["FeatureValueImpactPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "FeatureValueImpactPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListPolarPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListPolarPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RadialAxisPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "RadialAxisPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ArrayPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ArrayPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoContourPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoContourPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListStepPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListStepPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RegionPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "RegionPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AudioPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "AudioPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoDensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoDensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListStreamDensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListStreamDensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ReImPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ReImPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["BioSequencePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "BioSequencePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoGraphPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoGraphPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListStreamPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListStreamPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ReliefPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ReliefPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["BodePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "BodePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoGraphValuePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoGraphValuePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListVectorDensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListVectorDensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RootLocusPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "RootLocusPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ChromaticityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ChromaticityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["ListVectorDisplacementPlot", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListVectorDisplacementPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RulePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "RulePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CommunityGraphPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "CommunityGraphPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoRegionValuePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoRegionValuePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListVectorPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListVectorPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SingularValuePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "SingularValuePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexArrayPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexArrayPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoStreamPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoStreamPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LogLinearPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "LogLinearPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["StackedDateListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "StackedDateListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexContourPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexContourPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GeoVectorPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GeoVectorPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LogLogPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "LogLogPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["StackedListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "StackedListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GraphPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "GraphPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LogPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "LogPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["StreamDensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "StreamDensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ImageVectorscopePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ImageVectorscopePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MandelbrotSetPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "MandelbrotSetPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["StreamPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "StreamPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexRegionPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexRegionPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ImageWaveformPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ImageWaveformPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MatrixPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "MatrixPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SystemModelPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "SystemModelPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexStreamPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexStreamPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["JuliaSetPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "JuliaSetPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MoleculePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "MoleculePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["TernaryListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "TernaryListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ComplexVectorPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ComplexVectorPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LayeredGraphPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "LayeredGraphPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NicholsPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "NicholsPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["TimelinePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "TimelinePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ContourPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ContourPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["LineIntegralConvolutionPlot", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "LineIntegralConvolutionPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NumberLinePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "NumberLinePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["TreePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "TreePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 
+                 StyleBox["CumulativeFeatureImpactPlot", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "CumulativeFeatureImpactPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListContourPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListContourPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NyquistPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "NyquistPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["VectorDensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "VectorDensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DateListLogPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "DateListLogPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListCurvePathPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListCurvePathPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ParallelAxisPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ParallelAxisPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["VectorDisplacementPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "VectorDisplacementPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DateListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "DateListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListDensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListDensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ParametricPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ParametricPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["VectorPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "VectorPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DateListStepPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "DateListStepPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["ListLineIntegralConvolutionPlot", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListLineIntegralConvolutionPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Plot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "Plot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["WaveletImagePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "WaveletImagePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DensityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "DensityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListLinePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListLinePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PointValuePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "PointValuePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["WaveletListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "WaveletListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DiscretePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "DiscretePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListLogLinearPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListLogLinearPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PolarPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "PolarPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["WaveletMatrixPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "WaveletMatrixPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FeatureImpactPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "FeatureImpactPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListLogLogPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListLogLogPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ProbabilityPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ProbabilityPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 StyleBox["FeatureSpacePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "FeatureSpacePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListLogPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListLogPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ProbabilityScalePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ProbabilityScalePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], ""},
+               {
+                ButtonBox[
+                 
+                 StyleBox["FeatureValueDependencyPlot", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "FeatureValueDependencyPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ListPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "ListPlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["QuantilePlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-81ec5468-7c2f-44ce-a261-2453320601f9", {
+                   "QuantilePlot", "System`"}, False},
+                 ButtonNote->"System`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.2375]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.8825605113834963`*^9, 3.8825606070599785`*^9, 
+  3.8883559728009267`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"580820a6-3bac-47bb-b037-b54320f82bf0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MoleculePlot", "[", 
+  TemplateBox[<|"query" -> "caffeine", "boxes" -> TemplateBox[{"\"caffeine\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Chemical\"", ",", "\"Caffeine\""}], "]"}], 
+       "\"Entity[\\\"Chemical\\\", \\\"Caffeine\\\"]\"", "\"chemical\""}, 
+      "Entity"], 
+    "allassumptions" -> {{
+      "type" -> "Clash", "word" -> "caffeine", "template" -> 
+       "Assuming \"caffeine\" is a chemical compound${separator}Use as \
+${desc} or ${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"caffeine\"} -> {\"Chemical\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Chemical", "desc" -> "a chemical compound", "input" -> 
+          "{\"C\", \"caffeine\"} -> {\"Chemical\"}"}, {
+         "name" -> "Word", "desc" -> "a word", "input" -> 
+          "{\"C\", \"caffeine\"} -> {\"Word\"}"}, {
+         "name" -> "Movie", "desc" -> "a movie", "input" -> 
+          "{\"C\", \"caffeine\"} -> {\"Movie\"}"}}}}, "assumptions" -> {}, 
+    "open" -> {1, 2}, 
+    "querystate" -> {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.4477266`7.102557890626893, "Messages" -> {}}, "contextinfo" -> 
+    Automatic, "version" -> 5|>,
+   "LinguisticAssistantTemplate"], "]"}]], "Input",
+ CellChangeTimes->{{3.8825606899438066`*^9, 3.882560694270203*^9}, {
+  3.8825608068273087`*^9, 3.8825608128270864`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"c66e81cd-0e6d-4b48-a0d3-b9104b48376f"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {AbsoluteThickness[1.3], 
+    {RGBColor[0.800498, 0.201504, 0.192061], 
+     LineBox[{{{3.79209869902163, 1.7583426965775775`}, {3.79209869902163, 
+      1.3791713482887888`}}, {{3.6721013208147957`, 1.7583426965775775`}, {
+      3.6721013208147957`, 1.3791713482887888`}}}], 
+     LineBox[{{{2.168338701342871, -0.8335257194030162}, {
+      2.5021693161029894`, -0.640782856225444}}, {{
+      2.228338713731646, -0.9374457333072731}, {
+      2.5621693284917644`, -0.7447028701297007}}}]}, 
+    {RGBColor[0.4, 0.4, 0.4], 
+     LineBox[{{{3.79209869902163, 1.3791713482887888`}, {3.79209869902163, 
+      1.}}, {{3.6721013208147957`, 1.3791713482887888`}, {3.6721013208147957`,
+       1.}}}], LineBox[{{{2.5021693161029894`, -0.640782856225444}, {
+      2.8359999308631076`, -0.4480399930478716}}, {{
+      2.5621693284917644`, -0.7447028701297007}, {
+      2.8959999432518826`, -0.5519600069521284}}}], 
+     LineBox[{{4.252519423536539, -0.6995269583333333}, {
+      4.598100185394287, -0.5}}], 
+     LineBox[{{3.2116281267621147`, -0.6995313246903525}, {
+      2.865999937057495, -0.5}}], 
+     LineBox[{{3.732100009918213, -1.6180270879218885`}, {
+      3.732100009918213, -2.}}], 
+     LineBox[{{4.975115386924488, 0.6214083187290396}, {4.598100185394287, 
+      0.5}}], LineBox[{{5.90539315783972, 0.3068049101184218}, {
+      6.127900123596191, 0.}}], 
+     LineBox[{{5.736317852479969, 1.3921867756955888`}, {5.855000019073486, 
+      1.7553000450134277`}}], 
+     LineBox[{{3.3864718202135933`, 0.8004686753096475}, {3.732100009918213, 
+      1.}}], LineBox[{{2.865999937057495, -0.11802708792188854`}, {
+      2.865999937057495, -0.5}}], 
+     LineBox[{{2.345580648665579, 0.8004730520883196}, {2., 1.}}], 
+     LineBox[{{4.975115386924488, -0.6214083187290396}, {
+      4.598100185394287, -0.5}}], 
+     LineBox[{{{5.90539315783972, -0.3068049101184218}, {6.127900123596191, 
+      0.}}, {{5.778898347316673, -0.2768310266988085}, {
+      5.972050587141657, -0.01050203615594722}}}], 
+     LineBox[{{{4.598100185394287, 0.5}, {4.598100185394287, -0.5}}, {{
+      4.7180975636011215`, 0.4}, {4.7180975636011215`, -0.4}}}], 
+     LineBox[{{4.598100185394287, 0.5}, {3.732100009918213, 1.}}]}, 
+    {RGBColor[0.291989, 0.437977, 0.888609], 
+     LineBox[{{3.906938661678791, -0.8990539166666667}, {
+      4.252519423536539, -0.6995269583333333}}], 
+     LineBox[{{3.557256316466735, -0.8990626493807051}, {
+      3.2116281267621147`, -0.6995313246903525}}], 
+     LineBox[{{3.732100009918213, -1.236054175843777}, {
+      3.732100009918213, -1.6180270879218885`}}], 
+     LineBox[{{5.352130588454688, 0.7428166374580792}, {4.975115386924488, 
+      0.6214083187290396}}], 
+     LineBox[{{5.682886192083248, 0.6136098202368436}, {5.90539315783972, 
+      0.3068049101184218}}], 
+     LineBox[{{5.6176356858864525`, 1.02907350637775}, {5.736317852479969, 
+      1.3921867756955888`}}], 
+     LineBox[{{3.040843630508973, 0.6009373506192949}, {3.3864718202135933`, 
+      0.8004686753096475}}], 
+     LineBox[{{2.865999937057495, 0.2639458241562229}, {
+      2.865999937057495, -0.11802708792188854`}}], 
+     LineBox[{{2.6911612973311576`, 0.6009461041766392}, {2.345580648665579, 
+      0.8004730520883196}}], 
+     LineBox[{{5.352130588454688, -0.7428166374580792}, {
+      4.975115386924488, -0.6214083187290396}}], 
+     LineBox[{{{5.682886192083248, -0.6136098202368436}, {
+      5.90539315783972, -0.3068049101184218}}, {{
+      5.585746107491689, -0.5431600172416697}, {
+      5.778898347316673, -0.2768310266988085}}}]}}, {
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.801, 0.202, 0.192], 
+       FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+         3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+         3}}, {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+         3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, {CompressedData["
+1:eJxTTMoPSmViYGBQAmIQ3a0Ss+PpfB6Hr9rOL4vf/beH8RfqxrntTGFw+CVR
++8h7L4+DzNfgfYW7GBxOMtQkS/zgcXjy8Il06g8Gh5kvqp48MeJ1eH/5yMxw
+M0aHa2Evr5+q43UI9ur1CAxldHhwYv7aU7cR/GX8k7g2SPDB+R+Lb6tO8+dz
+WP8q1+eIG6PDwa/V/2sa+ByU1B4Yr9ZkdLhSk/0zaSOfw7TEIOlJPIwOi9g2
+n1txjc+hfu+1gn+PGRxe9jLH+3/gc4jQP//543oGhyKpxfxfOfkdjBYeL3ta
+zeBQcnvx8RNi/A5tgvEX7jsg+MbcJx0P/P1vD+PvO3uu9XP5f3tR9aI3HkD9
+LguT/RwZ/tuH7eMz83zH5+A1QfXO8mn/7G9H/ZrvcZnPgaEytIxf958986Zf
+jzjW8jnYv1M5KHP3r73gyTj5zmo+hwdvTjldWPbXXuHBoWhOLz6H/jebpzcX
+/LVvLFixY7EIn0Nk9tO82NC/9pX1cWHhwPCB8eUq7ty3nYvgP9+wWH1fKq/D
+5kNfTWOL/9pHrwoVv2HC6xBdcPlDzPq/9qEqKz98ZOZ1YJLbuDrm9V/7Owc1
+w5/e43HgeR1b62T7z/5903WvTUd5HEwudbnyL/1nz+TSale/hsdh0t7DUbd5
+EPGt0RY2cXkVgg9LDwB78/16
+         "], CompressedData["
+1:eJxTTMoPSmViYGCQAWIQLbLqtfLTnzwOPcW77+5//d8exv/yKenEAZ//9oaF
+MlKu/LwOK4zuH2s8/8++iuHgTRYrXof7ZjZqTCX/7A/3p848ksLrwGEVtqlJ
+4p/9r4WzHFNm8TqI7T7Id/jVX3shM9n/j28h+AITD56cJsMH5594tzd/ZRCf
+Q23LrTtfQfo9D1+QqeVz0BNtuxRd+s8+b5V4UP9yPofVC1WrD138Z596tajo
+5B4+h+1qM7Rvh/yH8xnneX9Y9g/B78sXY2AzZXAIrTVj37aZz4FfXfDi02QG
+B7Ozew36F/I5HPuVwv2pm8Hhivg3y8x+Pgerk5mq/zczONT8uHzrTgmfw63T
+6bw8lxkc9PPDhV8F8jm8ZF/3WPwlg4Pqa82cb3p8Dlvtls5U+c/gwCCnvHwv
+O5+D9K0FX7S4GB26xA1Ube/wwvnfbHdLFs5D8Hd9W93qksnr8HDlt80fvzA4
+qO+bzrrDhtch13ORUf0pBgcpNtV8bQFeB5t3cy5yL2BwgMXHjD2vo3QiEXxY
+fAEA1QDMDA==
+         "]}]},
+      "1"],
+     Annotation[#, 1, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.801, 0.202, 0.192], 
+       FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+         3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+         3}}, {{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+         3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, {CompressedData["
+1:eJxTTMoPSmViYGBQAmIQLe6544NM51977it7xHoEP+yH8Ws8259J5b7b/8Xw
+l8vLw3/tJ2lvYLMUe7t/MuMPtybLf/YFFTkTsuXe7De6+NVDev0/e+cNb2Ys
+VHu9f+3aS/rP3f7bb7p26u6uVa/2PzgxP7eYgcEBxl/GP+lUhC2C/7H49lO7
+EgYHt1CPc++evNp/8Gv1ftWlDA4V6fUGwZGv91+pyd7JfY3BYVXltknbz77e
+v4htc1/gbwYHFq6lNmwFb/a/7GWW/yHC6DDP6bCBhcPb/cVSi8/P1WN0sKx+
+qJIl8G5/6e3F7YXWjA7Pdjbva/iD4J/9YrbPnukDnO9kZFjF0/Fhv6h60ZqP
+uowOe+LmbNz3/8P+8H183z4KMTpsy7+lHJH5cf+dqF/xH78zODC0r+r8cOnj
+fuZNvxZtvMjgcFDwtt1jpU/7hU7G3TdcwOCgIGy6Vz/y036FB4ekN+UxOBQK
++2TU9H/a31SwosLHksFh+RSpiYtWfdpfWR8nBowGON/2ww77s83/7WH8C4nu
+58+K/Lf3teU6tajn0/7tIavXMW7+Z7+0X4d/ccCn/Ws8ghJNA//Z/3voF7JY
+5NP+nc3BejLs/+y/iCxq2nvo4/77rOtFt135a39Gt3TXh6iP+1k6uP76L/pr
+n+dks1TlMyK+b1SuzItoRfBh6QEA2NwdbQ==
+         "], CompressedData["
+1:eJxTTMoPSmViYGCQAWIQrRly/bi07T/7kh4XJQeRD/thfB7eueb2mz/sT3lk
+seV2+j/7iLMKlnUGH/d/ZWgyjt77z17x5OGbf7s/7m+XP73pltB/+x9HV/rW
+PgfKO5syS9X9t3/lYvfRRvTTftUcqzrJ/wi+wMSDnfaODA4w/sl3e/WDyhkc
+mqtVlbmA+n95Hp5wdCGDw6VXlbpLuj7uz1slLmRxhsEhNO5Wi63ex/2pV4uM
+ih4yOHjeTL+isvoDnP8/cQt/JCOCf8xx2f/n2u/3h9WaHY+7weBwJHn37oyC
+d/vNzu79YH6MweGFSM4l8wtv918R//ZTcAuDg+TtiCxmg7f7a35cntU6k8Fh
+5oWEU+c3v9lvkB9+eVIZg0PMA/fCBdFv9qu91tSZH8zgoMOaPTOX+c1+Rjnl
+9DQdBocp02t0Q66/3t8lbvD0KQOC/7a6bLNx2397GL/0bXj3Len/9jURqgaW
+Om/2+9fodx889M/e51aZKfO1N/tNebziVmT+sxdy79l5of4tPD7m8QZO8Zv9
+bj96fAEAqpfh3A==
+         "]}]},
+      "2"],
+     Annotation[#, 2, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.292, 0.438, 0.889], 
+       FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+        0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+        3.605210615626674, -1.1610558144645056`}, {
+        3.605210615626674, -0.8389441855354947}, {
+        3.6489353269628904`, -0.8389441855354947}, {
+        3.8181202971488077`, -1.091843493334132}, {
+        3.8181202971488077`, -0.8389441855354947}, {
+        3.858989404209752, -0.8389441855354947}, {
+        3.858989404209752, -1.1610558144645056`}, {
+        3.815265359525637, -1.1610558144645056`}, {
+        3.646078889372492, -0.9079360114834131}, {
+        3.646078889372492, -1.1610558144645056`}}}]},
+      "3"],
+     Annotation[#, 3, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.292, 0.438, 0.889], 
+       FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+        0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+        5.417410685054164, 0.6436442025108975}, {5.417410685054164, 
+        0.9657558314399082}, {5.461135396390381, 0.9657558314399082}, {
+        5.6303203665762975`, 0.712856523641271}, {5.6303203665762975`, 
+        0.9657558314399082}, {5.671189473637242, 0.9657558314399082}, {
+        5.671189473637242, 0.6436442025108975}, {5.627465428953126, 
+        0.6436442025108975}, {5.458278958799982, 0.8967640054919899}, {
+        5.458278958799982, 0.6436442025108975}}}]},
+      "4"],
+     Annotation[#, 4, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.292, 0.438, 0.889], 
+       FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+        0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+        2.7391105427659563`, 0.3389441855354946}, {2.7391105427659563`, 
+        0.6610558144645053}, {2.7828352541021726`, 0.6610558144645053}, {
+        2.95202022428809, 0.4081565066658681}, {2.95202022428809, 
+        0.6610558144645053}, {2.9928893313490343`, 0.6610558144645053}, {
+        2.9928893313490343`, 0.3389441855354946}, {2.949165286664919, 
+        0.3389441855354946}, {2.779978816511774, 0.592063988516587}, {
+        2.779978816511774, 0.3389441855354946}}}]},
+      "5"],
+     Annotation[#, 5, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {RGBColor[0.292, 0.438, 0.889], 
+       FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+        0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+        5.417410685054164, -0.9657558314399084}, {
+        5.417410685054164, -0.6436442025108975}, {
+        5.461135396390381, -0.6436442025108975}, {
+        5.6303203665762975`, -0.8965435103095348}, {
+        5.6303203665762975`, -0.6436442025108975}, {
+        5.671189473637242, -0.6436442025108975}, {
+        5.671189473637242, -0.9657558314399084}, {
+        5.627465428953126, -0.9657558314399084}, {
+        5.458278958799982, -0.7126360284588159}, {
+        5.458278958799982, -0.9657558314399084}}}]},
+      "6"],
+     Annotation[#, 6, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{4.598100185394287, 0.5}, 0.2]},
+      "7"],
+     Annotation[#, 7, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{4.598100185394287, -0.5}, 0.2]},
+      "8"],
+     Annotation[#, 8, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{3.732100009918213, 1.}, 0.2]},
+      "9"],
+     Annotation[#, 9, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{2.865999937057495, -0.5}, 0.2]},
+      "10"],
+     Annotation[#, 10, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{6.127900123596191, 0.}, 0.2]},
+      "11"],
+     Annotation[#, 11, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{3.732100009918213, -2.}, 0.2]},
+      "12"],
+     Annotation[#, 12, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], 
+       DiskBox[{5.855000019073486, 1.7553000450134277}, 0.2]},
+      "13"],
+     Annotation[#, 13, "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      {Opacity[0], EdgeForm[None], DiskBox[{2., 1.}, 0.2]},
+      "14"],
+     Annotation[#, 14, "Tooltip"]& ]}},
+  DisplayFunction->Identity,
+  ImageSize->{269.30163604529446`, Automatic},
+  ImageSizeRaw->397.0349693786294]], "Output",
+ CellChangeTimes->{3.8825606993466315`*^9, 3.8825608138510003`*^9, 
+  3.8883559731691766`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"698603c1-b588-42b0-bddb-038d59428c23"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->{"EditBar", "MultipurposeBar"},
+WindowSize->{1909, 1007},
+WindowMargins->{{-1920, Automatic}, {Automatic, 0}},
+DockedCells->{
+  Cell["\[Copyright] 2023 Socratica"]},
+CellMargins->{{80, 10}, {10, 4}},
+CellBracketOptions->{"Color"->RGBColor[
+ 0., 0.3686274509803922, 0.47058823529411764`],
+"Margins"->{0, 25},
+"Thickness"->2,
+"Widths"->{0, 12.5}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+DefaultNewCellStyle->"Input",
+AutoStyleOptions->{"CommentStyle"->{
+ FontWeight -> Plain, FontColor -> 
+  RGBColor[0.2196078431372549, 0.5254901960784314, 0.34901960784313724`], 
+  ShowAutoStyles -> False, ShowSyntaxStyles -> False, AutoNumberFormatting -> 
+  False}},
+LineIndent->1,
+LineColor->GrayLevel[0],
+FrontFaceColor->GrayLevel[0],
+BackFaceColor->GrayLevel[0],
+GraphicsColor->GrayLevel[0],
+Magnification->1.5,
+FontColor->GrayLevel[0],
+Background->RGBColor[0.8, 0.8588235294117647, 0.8627450980392157],
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6790aa9a-f1fd-4032-be3f-27958c55b8d9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 903, 13, 146, "Title",ExpressionUUID->"03779fd7-1081-4021-b952-c4afe3d4c95c"],
+Cell[1486, 37, 840, 18, 86, "Author",ExpressionUUID->"5c4c7506-3563-4e0f-b30a-8627ebf1186b"],
+Cell[CellGroupData[{
+Cell[2351, 59, 657, 10, 100, "Section",ExpressionUUID->"3f2fd9c6-d2e4-4ce4-8d57-1b0b1139d74f"],
+Cell[CellGroupData[{
+Cell[3033, 73, 319, 7, 42, "Input",ExpressionUUID->"5f72ae03-5c36-48ca-bac9-583dfc059894"],
+Cell[3355, 82, 288, 6, 48, "Output",ExpressionUUID->"06c0e65f-8b9d-428d-a880-1ab05301b4c0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3680, 93, 206, 3, 42, "Input",ExpressionUUID->"c8090162-46c3-4d4c-b4fa-d9d45bd04754"],
+Cell[3889, 98, 180, 2, 48, "Output",ExpressionUUID->"10297ee6-6ecb-4d18-a8e8-07c6dcbed05d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4106, 105, 219, 3, 42, "Input",ExpressionUUID->"85405eb2-8545-41c1-8a4e-b276d8fbcc18"],
+Cell[4328, 110, 189, 2, 48, "Output",ExpressionUUID->"fa68e538-d6d3-4580-b2d9-b4fdcc0c4f44"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4554, 117, 208, 3, 42, "Input",ExpressionUUID->"ffca832f-927b-4d94-9897-1261ca04cfc0"],
+Cell[4765, 122, 3490, 93, 317, "Output",ExpressionUUID->"452ed0b0-95de-4b3f-b925-0e44e36d84e0"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8304, 221, 635, 9, 100, "Section",ExpressionUUID->"f626e3f8-c63f-46f6-b3d9-00eb0da01e93"],
+Cell[CellGroupData[{
+Cell[8964, 234, 254, 4, 42, "Input",ExpressionUUID->"847c0ced-1c30-4b6d-8766-bc40512c1aa8"],
+Cell[9221, 240, 189, 2, 48, "Output",ExpressionUUID->"a2e3de1f-e17b-4e82-99e7-8c1990b5f49d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9447, 247, 205, 3, 42, "Input",ExpressionUUID->"be645651-c471-473d-8170-abf1f3c24dd3"],
+Cell[9655, 252, 33582, 587, 340, "Output",ExpressionUUID->"dcf531b4-7035-4860-a555-575ca5683411"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43274, 844, 204, 3, 42, "Input",ExpressionUUID->"c9789927-53e7-442a-a94a-81bb124ab1b1"],
+Cell[43481, 849, 2027, 31, 162, "Output",ExpressionUUID->"1d9a0c39-c035-4e0b-b40c-44bfc768980f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45557, 886, 1048, 15, 100, "Section",ExpressionUUID->"f56aaeff-a372-44ff-bec6-d535ca1d3dae"],
+Cell[CellGroupData[{
+Cell[46630, 905, 322, 5, 42, "Input",ExpressionUUID->"6d123692-22a6-4a70-a870-e48b4bb0ce53"],
+Cell[46955, 912, 10061, 242, 228, "Output",ExpressionUUID->"582274cd-47ed-49d8-887d-23ff3ee0a469"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57053, 1159, 243, 4, 42, "Input",ExpressionUUID->"efb2bb99-3d45-4f9c-bcdb-1da9ab58eb9c"],
+Cell[57299, 1165, 43427, 1022, 868, "Output",ExpressionUUID->"580820a6-3bac-47bb-b037-b54320f82bf0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[100763, 2192, 1480, 27, 59, "Input",ExpressionUUID->"c66e81cd-0e6d-4b48-a0d3-b9104b48376f"],
+Cell[102246, 2221, 11604, 240, 414, "Output",ExpressionUUID->"698603c1-b588-42b0-bddb-038d59428c23"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
