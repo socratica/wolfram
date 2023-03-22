@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Argentina",
+    "area": 2780400,
+    "population": 45376763
+  },
+  {
+    "name": "Bolivia",
+    "area": 1098581,
+    "population": 11673029
+  },
+  {
+    "name": "Brazil",
+    "area": 8515767,
+    "population": 213993437
+  },
+  {
+    "name": "Chile",
+    "area": 756102,
+    "population": 19116209
+  },
+  {
+    "name": "Colombia",
+    "area": 1141748,
+    "population": 50882891
+  },
+  {
+    "name": "Ecuador",
+    "area": 283561,
+    "population": 17643060
+  },
+  {
+    "name": "Guyana",
+    "area": 214969,
+    "population": 787386
+  },
+  {
+    "name": "Paraguay",
+    "area": 406752,
+    "population": 7132530
+  },
+  {
+    "name": "Peru",
+    "area": 1285216,
+    "population": 32933835
+  },
+  {
+    "name": "Suriname",
+    "area": 163820,
+    "population": 591919
+  },
+  {
+    "name": "Uruguay",
+    "area": 176215,
+    "population": 3473727
+  },
+  {
+    "name": "Venezuela",
+    "area": 912050,
+    "population": 28515829
+  }
+]
